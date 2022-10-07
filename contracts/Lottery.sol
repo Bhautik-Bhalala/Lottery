@@ -36,7 +36,9 @@ contract Lottery {
         // require(msg.senger == manager);
         uint index = random() % players.length;
         players[index].transfer(this.balance);
+        
         players = new address[](0);
+
         // temp.transfer(this.balance);
     }
 
